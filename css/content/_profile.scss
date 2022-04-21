@@ -1,0 +1,717 @@
+.profile-container {
+	position: relative;
+	display: grid;
+	width: 100%;
+	max-width: 1500px;
+	margin: 0 auto;
+	grid-template-columns: 448px minmax(100px, 580px) 448px;
+	grid-gap: 30px 0;
+
+	.left-row {
+		position: relative;
+		display: block;
+		width: 100%;
+		align-self: end;
+		grid-column: 1;
+	}
+
+	.right-row {
+		position: relative;
+		display: block;
+		width: 100%;
+		align-self: end;
+		grid-column: 3;
+	}
+
+	.left-row, .right-row {
+		.info-case {
+			position: relative;
+			display: block;
+			width: 448px;
+			height: 397px;
+
+			.grade-child {
+				position: absolute;
+				display: block;
+				width: 448px;
+				height: 397px;
+				perspective: 448px;
+				perspective-origin: 50%;
+
+				&:before, &:after {
+					top: -62px;
+				    left: 42px;
+				    right: 42px;
+				    bottom: 20px;
+					transform: rotateX(25deg);
+					@include rad(24px);
+				}
+
+				&:before {
+					background: linear-gradient(0deg, #090a13 0%, #1A1C30 100%);
+				}
+			}
+
+			&.all-grades {
+				&:before {
+					background: url(../images/case-dots.png) no-repeat center;
+					top: 0;
+					left: -10px;
+				}
+			}
+
+			.price {
+				position: absolute;
+				display: flex;
+				width: max-content;
+				height: 45px;
+				top: 24px;
+				right: 23px;
+				z-index: 4;
+
+				&:before {
+					content: '';
+					position: absolute;
+					display: block;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: $y;
+					@include rad(8px);
+					transform: skew(-7deg);
+				}
+
+				.count {
+					position: relative;
+					display: flex;
+					height: inherit;
+					padding: 0 18px;
+					min-width: 60px;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+					white-space: nowrap;
+					color: $b6;
+					font-size: 18px;
+					font-family: $fmb;
+				}
+
+				.val {
+					position: relative;
+					display: flex;
+					width: 45px;
+					height: 45px;
+					color: $b6;
+					font-size: 18px;
+					font-family: $fmb;
+					z-index: 1;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+					white-space: nowrap;
+					flex: none;
+					font-family: $fh;
+					font-weight: 700;
+
+					&:before {
+						content: '';
+						position: absolute;
+						display: block;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background: $y1;
+						@include rad(8px);
+						transform: skew(-7deg);
+						z-index: -1;
+					}
+				}
+			}
+
+			.frame {
+				position: relative;
+				display: block;
+				width: 100%;
+				height: 0;
+				padding-bottom: 72%;
+
+				.img {
+					position: absolute;
+					display: flex;
+					width: 100%;
+					height: 100%;
+					padding: 20px;
+					align-items: center;
+					justify-content: center;
+
+					img {
+						position: relative;
+						display: block;
+						width: auto;
+						max-width: 100%;
+						height: auto;
+						max-height: 100%;
+					}
+				}
+			}
+
+			.name {
+				position: relative;
+				display: block;
+				width: 100%;
+				text-align: center;
+				color: $w;
+				font-size: 24px;
+				font-family: $fmb;
+				z-index: 1;
+				padding: 0 20px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+
+				&:before {
+					content: attr(data-text);
+					position: absolute;
+					display: block;
+					top: -13px;
+					left: 50%;
+					transform: translateX(-50%);
+					font-size: 45px;
+					-webkit-text-stroke: 1px $b9;
+					opacity: 0.65;
+					color: rgba($b9, 0);
+					font-family: $fmb;
+					z-index: -1;
+					pointer-events: none;
+					white-space: nowrap;
+				}
+
+				@include s-max(x1000) {
+					font-size: 18px;
+
+					&:before {
+						font-size: 36px;
+					}
+				}
+			}
+		}
+
+		.label-info {
+			position: absolute;
+			display: flex;
+			width: max-content;
+			white-space: nowrap;
+			min-width: 165px;
+			height: 45px;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			top: calc(100% + 40px);
+			left: 50%;
+			transform: translateX(-50%);
+			color: $w;
+			font-size: 18px;
+			font-family: $fmb;
+
+			span {
+				position: relative;
+				display: block;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: $b16;
+				transform: skew(-10deg);
+				@include rad(8px);
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				display: block;
+				width: 20px;
+				height: 20px;
+				bottom: 100%;
+				left: 50%;
+				transform: translateX(-50%);
+				background: $b16;
+				clip-path: polygon(50% 0, 100% 100%, 0 100%);
+			}
+		}
+	}
+
+	.left-row {
+		.info-case {
+			.grade-child {
+				transform: rotate(180deg);
+			}
+
+			.name {
+				padding: 0 70px;
+				max-height: 56px;
+			}
+		}
+	}
+
+	.right-row {
+		.info-case {
+			.price {
+				right: 85px;
+
+				&:before, .val:before {
+					transform: skew(7deg);
+				}
+			}
+
+			&.all-grades {
+				&:before {
+					background: url(../images/case-dots.png) no-repeat center;
+					top: 0;
+					left: 20px;
+				}
+			}
+		}
+	}
+
+	.center-row {
+		position: relative;
+		display: block;
+		width: 100%;
+		align-self: end;
+		grid-column: 2;
+		padding: 34px 20px;
+		left: -3px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			@include rad(18px);
+			background: radial-gradient(50% 50% at 50% 50%, rgba(230, 68, 238, 0) 0%, rgba(161, 138, 255, 0.07) 100%);
+			opacity: 0.65;
+			box-shadow: 0px 35px 65px rgba(13, 14, 27, 0.15);
+			transform: skew(-11deg);
+		}
+
+		.user-info {
+			position: relative;
+			display: block;
+			width: 100%;
+			min-height: 300px;
+
+			.avatar {
+				position: relative;
+				display: flex;
+				width: 123px;
+				height: 123px;
+				align-items: center;
+				justify-content: center;
+				@include rad(8px);
+				transform: skew(-10deg);
+				overflow: hidden;
+				margin: 0 auto 0;
+
+				img {
+					position: relative;
+					display: block;
+					width: calc(100% + 20px);
+					height: auto;
+					min-height: calc(100% + 10px);
+					transform: skew(10deg);
+				}
+			}
+
+			.name {
+				position: relative;
+				display: flex;
+				width: 100%;
+				overflow: hidden;
+				justify-content: center;
+				margin: 19px auto 0;
+				align-items: center;
+				
+				.text {
+					position: relative;
+					display: block;
+					max-width: 100%;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					color: $w;
+					font-size: 18px;
+					font-family: $fmb;
+				}
+
+				.ico {
+					position: relative;
+					display: block;
+					margin-left: 10px;
+					top: 1px;
+
+					img {
+						position: relative;
+						display: block;
+						max-width: 24px;
+						height: auto;
+					}
+				}
+			}
+
+			.stats {
+				position: relative;
+				display: block;
+				width: 100%;
+				margin: 25px auto 0;
+
+				ul {
+					position: relative;
+					display: flex;
+					align-items: flex-start;
+					justify-content: center;
+					margin: -10px -15px;
+					flex-wrap: wrap;
+
+					li {
+						position: relative;
+						display: flex;
+						margin: 10px 15px;
+						align-items: flex-start;
+
+						.ico {
+							position: relative;
+							display: flex;
+							width: 25px;
+							align-items: flex-start;
+							justify-content: center;
+							margin-right: 11px;
+							flex: none;
+
+							.svg {
+								width: 25px;
+								height: 25px;
+								background: linear-gradient(267.23deg, #7E0BEC 17.52%, #665CFF 71.2%);
+
+								&.referral {
+									width: 28px;
+									height: 28px;
+								}
+							}
+						}
+
+						.desc {
+							position: relative;
+							display: block;
+
+							span {
+								position: relative;
+								display: block;
+								color: $w;
+								font-size: 24px;
+								font-family: $fms;
+								line-height: 21px;
+							}
+
+							p {
+								position: relative;
+								display: block;
+								color: $w15;
+								font-size: 14px;
+								font-family: $fms;
+								margin-top: 4px;
+							}
+						}
+					}
+				}
+			}
+
+			.output-button {
+				position: relative;
+				display: flex;
+				width: max-content;
+				height: 50px;
+				color: $b6;
+				font-size: 18px;
+				font-family: $fms;
+				align-items: center;
+				margin: 20px auto 0;
+
+				&:before {
+					content: '';
+					position: absolute;
+					display: block;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: $y;
+					transform: skew(10deg);
+					@include rad(8px);
+					@include transition(0.2s);
+				}
+
+				.text {
+					position: relative;
+					display: block;
+					padding: 0 16px 0 28px;
+					text-align: center;
+				}
+
+				.ico {
+					position: relative;
+					display: flex;
+					width: 50px;
+					height: inherit;
+					align-items: center;
+					justify-content: center;
+
+					&:before {
+						content: '';
+						position: absolute;
+						display: block;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background: $y1;
+						transform: skew(10deg);
+						@include rad(8px);
+					}
+
+					.svg {
+						width: 16px;
+						height: 16px;
+						background: $b6;
+					}
+				}
+
+				@include s-min(x1000) {
+					&:hover {
+						&:before {
+							background: $y2;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@include s-max(x1400) {
+		grid-template-columns: 1fr 1fr;
+		width: 100%;
+
+		.left-row {
+			grid-column: 1;
+			grid-row: 2;
+			justify-self: end;
+			width: unset;
+			margin: 0 -20px;
+		}
+
+		.right-row {
+			grid-column: 2;
+			grid-row: 2;
+			justify-self: start;
+			width: unset;
+			margin: 0 -20px;
+		}
+
+		.center-row {
+			grid-column: 1 / -1;
+			grid-row: 1;
+			max-width: 580px;
+			margin: 0 auto;
+		}
+
+		.left-row, .right-row {
+			.label-info {
+				top: calc(100% + 4px);
+			}
+		}
+	}
+
+	@include s-max(x900) {
+		.left-row, .right-row {
+			margin: 0 -8px;
+
+			.label-info {
+				height: 34px;
+				font-size: 12px;
+				min-width: 135px;
+			}
+
+			.info-case {
+				width: 217px;
+				height: 135px;
+
+				.grade-child {
+					width: 217px;
+					height: 135px;
+					perspective: 217px;
+					perspective-origin: 50%;
+
+					&:before, &:after {
+						transform: rotateX(25deg);
+						top: -18px;
+					    left: 15px;
+					    right: 15px;
+						bottom: 2px;
+						@include rad(12px);
+					}
+				}
+
+				.price {
+					height: 26px;
+					right: unset;
+					top: 0%;
+					left: 50%;
+					transform: translate(-50%, -25%);
+
+					&:before {
+						@include rad(4px);
+					}
+
+					.count {
+						min-height: unset;
+						padding: 0 10px;
+						font-size: 14px;
+					}
+
+					.val {
+						height: 26px;
+						width: 26px;
+						font-size: 14px;
+
+						&:before {
+							@include rad(4px);
+						}
+					}
+				}
+
+				.frame {
+					padding-bottom: 49%;
+
+					.img {
+						padding: 15px 15px 10px;
+					}
+				}
+
+				.name {
+					font-size: 12px;
+					font-family: $fmm;
+					margin: 0 auto;
+					white-space: nowrap;
+				}
+			}
+		}
+
+		.left-row {
+			.info-case {
+				.name {
+					padding: 0 30px;
+				}
+			}
+		}
+	}
+
+	@include s-max(x600) {
+		.center-row {
+			padding: 25px 10px;
+
+			&:before {
+				transform: unset;
+			}
+
+			.user-info {
+				.stats {
+					ul {
+						width: 100%;
+						flex-direction: column;
+						margin: 0 auto !important;
+
+						li {
+							margin: 0 auto;
+							min-width: 280px;
+							padding: 10px;
+							align-items: center;
+
+							& + li {
+								margin-top: 5px;
+							}
+
+							.ico {
+								width: 50px;
+
+								.svg {
+									&.referral {
+										left: 2px;
+									}
+								}
+							}
+
+							&:before {
+								content: '';
+								position: absolute;
+								display: block;
+								top: 0;
+								left: 0;
+								right: 0;
+								bottom: 0;
+								border: 1px solid $b2;
+								@include rad(8px);
+								transform: skew(-10deg);
+							}
+
+							&:nth-child(even):before {
+								transform: skew(10deg);
+							}
+						}
+					}
+				}
+
+				.output-button {
+					margin: 5px auto 0;
+					height: 62px;
+				}
+			}
+		}
+	}
+
+	@include s-max(x450) {
+		.left-row, .right-row {
+			.info-case {
+				width: 170px;
+				height: 100px;
+
+				.grade-child {
+					width: 170px;
+					height: 100px;
+					perspective: 170px;
+
+					&:before, &:after {
+						transform: rotateX(25deg);
+						top: -12px;
+					    left: 10px;
+					    right: 10px;
+						bottom: 1px;
+					}
+				}
+
+				.name {
+					font-size: 10px;
+					margin-top: -5px;
+				}
+			}
+		}
+	}
+}

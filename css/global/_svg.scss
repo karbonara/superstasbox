@@ -1,0 +1,43 @@
+@mixin svg($name) {
+    mask: url(../images/svg/#{$name}.svg) no-repeat center / contain;
+    -webkit-mask: url(../images/svg/#{$name}.svg) no-repeat center / contain;
+}
+
+i.svg {
+    position: relative;
+    display: block;
+    background-color: $w;
+    width: 20px;
+    height: 20px;
+    flex: none;
+
+    &.prize{@include svg(prize);}
+    &.ok{@include svg(ok);}
+    &.vk{@include svg(vk);}
+    &.plus{@include svg(plus);}
+    &.exit{@include svg(exit);}
+    &.bookmarks{@include svg(bookmarks);}
+    &.search{@include svg(search);}
+    &.def{@include svg(def);}
+    &.bag{@include svg(bag);}
+    &.play{@include svg(play);}
+    &.send{@include svg(send);}
+    &.dropbox{@include svg(dropbox);}
+    &.check{@include svg(check);}
+    &.user{@include svg(user);}
+    &.users{@include svg(users);}
+    &.cooperation{@include svg(cooperation);}
+    &.close{@include svg(close);}
+    &.fb{@include svg(fb);}
+    &.odk{@include svg(odk);}
+    &.faq{@include svg(faq);}
+    &.message{@include svg(message);}
+    &.star{@include svg(star);}
+    &.download{@include svg(download);}
+    &.contracts{@include svg(contracts);}
+    &.cases{@include svg(cases);}
+    &.referral{@include svg(referral);}
+    &.boxes{@include svg(boxes);}
+    &.arrow{@include svg(arrow);}
+    &.cart{@include svg(cart);}
+}

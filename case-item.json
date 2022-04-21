@@ -1,0 +1,34 @@
+{
+  "cases": [
+    {
+      "id": 0,
+      "imageUrl": "https://superstasbox.ru/uploads/images/c3fbf97b4fd11f339def7ecdaa704a79.png",
+      "name": "Крипто-трейдер",
+      "price": 899
+    },
+    {
+      "id": 0,
+      "imageUrl": "https://superstasbox.ru/uploads/images/96ce0bfc862f5d44148d7f9f9d43ddef.png",
+      "name": "Подарок подружке",
+      "price": 899
+    },
+    {
+      "id": 0,
+      "imageUrl": "https://superstasbox.ru/uploads/images/c3fbf97b4fd11f339def7ecdaa704a79.png",
+      "name": "Крипто-трейдер",
+      "price": 899
+    },
+    {
+      "id": 0,
+      "imageUrl": "https://superstasbox.ru/uploads/images/c3fbf97b4fd11f339def7ecdaa704a79.png",
+      "name": "Крипто-трейдер",
+      "price": 899
+    },
+    {
+      "id": 0,
+      "imageUrl": "https://superstasbox.ru/uploads/images/c3fbf97b4fd11f339def7ecdaa704a79.png",
+      "name": "Крипто-трейдер",
+      "price": 899
+    }
+  ]
+}

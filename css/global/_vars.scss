@@ -1,0 +1,170 @@
+$w: #ffffff;
+$w1: #7A7D98;
+$w2: #6B6F8A;
+$w3: #A1A1CD;
+$w4: #363954;
+$w5: #A5A5A5;
+$w6: #BEBEBE;
+$w7: #535770;
+$w8: #282C46;
+$w9: #626683;
+$w10: #454167;
+$w11: #5F5F80;
+$w12: #44466C;
+$w13: #68698D;
+$w14: #404263;
+$w15: #393652;
+$w16: #47495F;
+$w17: #3F435B;
+
+$b: #000000;
+$b1: #191B2E;
+$b2: #31344F;
+$b3: #303248;
+$b4: #18192C;
+$b5: #131524;
+$b6: #111322;
+$b7: #4A4D65;
+$b8: #1B1E32;
+$b9: #262944;
+$b10: #0E101D;
+$b11: #151726;
+$b12: #0D0E1A;
+$b13: #252443;
+$b14: #393B5B;
+$b15: #1E2038;
+$b16:#0E0E1A;
+
+$y: #FFB800;
+$y1: #DFA100;
+$y2: #ff8d00;
+
+$r: #FF4848;
+
+$p: #AF48FF;
+$p1: #8448FF;
+
+$g: #ACC02F;
+
+$bg: #131524;
+
+
+
+
+@font-face {
+	font-family: 'MazzardL-Regular';
+	src:url('../fonts/MazzardL-Regular.eot');
+	src:url('../fonts/MazzardL-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MazzardL-Regular.woff') format('woff'),
+		url('../fonts/MazzardL-Regular.ttf') format('truetype'),
+		url('../fonts/MazzardL-Regular.svg?#MazzardL-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MazzardL-Medium';
+	src:url('../fonts/MazzardL-Medium.eot');
+	src:url('../fonts/MazzardL-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MazzardL-Medium.woff') format('woff'),
+		url('../fonts/MazzardL-Medium.ttf') format('truetype'),
+		url('../fonts/MazzardL-Medium.svg?#MazzardL-Medium') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MazzardL-SemiBold';
+	src:url('../fonts/MazzardL-SemiBold.eot');
+	src:url('../fonts/MazzardL-SemiBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MazzardL-SemiBold.woff') format('woff'),
+		url('../fonts/MazzardL-SemiBold.ttf') format('truetype'),
+		url('../fonts/MazzardL-SemiBold.svg?#MazzardL-SemiBold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MazzardL-Bold';
+	src:url('../fonts/MazzardL-Bold.eot');
+	src:url('../fonts/MazzardL-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MazzardL-Bold.woff') format('woff'),
+		url('../fonts/MazzardL-Bold.ttf') format('truetype'),
+		url('../fonts/MazzardL-Bold.svg?#MazzardL-Bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MazzardL-Black';
+	src:url('../fonts/MazzardL-Black.eot');
+	src:url('../fonts/MazzardL-Black.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MazzardL-Black.woff') format('woff'),
+		url('../fonts/MazzardL-Black.ttf') format('truetype'),
+		url('../fonts/MazzardL-Black.svg?#MazzardL-Black') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MazzardM-Bold';
+	src:url('../fonts/MazzardM-Bold.eot');
+	src:url('../fonts/MazzardM-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MazzardM-Bold.woff') format('woff'),
+		url('../fonts/MazzardM-Bold.ttf') format('truetype'),
+		url('../fonts/MazzardM-Bold.svg?#MazzardM-Bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MazzardM-SemiBold';
+	src:url('../fonts/MazzardM-SemiBold.eot');
+	src:url('../fonts/MazzardM-SemiBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MazzardM-SemiBold.woff') format('woff'),
+		url('../fonts/MazzardM-SemiBold.ttf') format('truetype'),
+		url('../fonts/MazzardM-SemiBold.svg?#MazzardM-SemiBold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MazzardM-Regular';
+	src:url('../fonts/MazzardM-Regular.eot');
+	src:url('../fonts/MazzardM-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MazzardM-Regular.woff') format('woff'),
+		url('../fonts/MazzardM-Regular.ttf') format('truetype'),
+		url('../fonts/MazzardM-Regular.svg?#MazzardM-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MazzardM-Medium';
+	src:url('../fonts/MazzardM-Medium.eot');
+	src:url('../fonts/MazzardM-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MazzardM-Medium.woff') format('woff'),
+		url('../fonts/MazzardM-Medium.ttf') format('truetype'),
+		url('../fonts/MazzardM-Medium.svg?#MazzardM-Medium') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$fr: 'MazzardL-Regular';
+$fm: 'MazzardL-Medium';
+$fs: 'MazzardL-SemiBold';
+$fb: 'MazzardL-Bold';
+$fk: 'MazzardL-Black';
+
+$fmr: 'MazzardM-Regular';
+$fmb: 'MazzardM-Bold';
+$fms: 'MazzardM-SemiBold';
+$fmm: 'MazzardM-Medium';
+
+
+@font-face {
+    font-family: helveticaneue;
+    src: url(../fonts/helveticaneue.ttf);
+}
+
+$fh: helveticaneue;
