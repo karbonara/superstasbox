@@ -1,0 +1,330 @@
+// ОБЩИЕ НАСТРОЙКИ
+$color: $w9;
+$background: $b11;
+$size: 14px;
+$font: $fms;
+
+input[type="text"], input[type="password"], input[type="date"], 
+input[type="datetime"], input[type="number"], input[type="search"], 
+input[type="tel"], input[type="time"], input[type="url"], 
+input[type="month"], input[type="week"], input[type="email"] {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 50px;
+	background: $background;
+	border: none;
+	color: $color;
+	font-size: $size;
+	padding: 0 25px;
+	font-family: $font;
+	@include rad(8px);
+
+
+	&::-webkit-input-placeholder {
+		color: $color;
+		@include transition(0.2s);
+	}
+	&:-moz-placeholder {
+		color: $color;
+		@include transition(0.2s);
+	}
+	&::-moz-placeholder {
+		color: $color;
+		@include transition(0.2s);
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+		@include transition(0.2s);
+	}
+
+	&:focus::-webkit-input-placeholder { 
+		transform: translateY(-100%);
+		visibility: hidden;
+		opacity:0; 
+	}
+	&:focus:-moz-placeholder { 
+		transform: translateY(-100%);
+		visibility: hidden;
+		opacity:0; 
+	}
+	&:focus::-moz-placeholder { 
+		transform: translateY(-100%);
+		visibility: hidden;
+		opacity:0; 
+	}
+	&:focus:-ms-input-placeholder { 
+		transform: translateY(-100%);
+		visibility: hidden;
+		opacity:0;
+	}
+}
+
+select {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 50px;
+	background: $background;
+	border: none;
+	color: $color;
+	font-size: $size;
+	padding: 0 15px;
+	font-family: $font;
+	@include rad(8px);
+}
+
+textarea {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 50px;
+	background: $background;
+	border: none;
+	color: $color;
+	font-size: $size;
+	padding: 0 15px;
+	font-family: $font;
+	@include rad(8px);
+
+	&::-webkit-input-placeholder {
+		color: $color;
+		@include transition(0.2s);
+	}
+	&:-moz-placeholder {
+		color: $color;
+		@include transition(0.2s);
+	}
+	&::-moz-placeholder {
+		color: $color;
+		@include transition(0.2s);
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+		@include transition(0.2s);
+	}
+
+	&:focus::-webkit-input-placeholder { 
+		transform: translateY(-100%);
+		visibility: hidden;
+		opacity:0; 
+	}
+	&:focus:-moz-placeholder { 
+		transform: translateY(-100%);
+		visibility: hidden;
+		opacity:0; 
+	}
+	&:focus::-moz-placeholder { 
+		transform: translateY(-100%);
+		visibility: hidden;
+		opacity:0; 
+	}
+	&:focus:-ms-input-placeholder { 
+		transform: translateY(-100%);
+		visibility: hidden;
+		opacity:0;
+	}
+}
+
+div, section {
+	position: relative;
+	display: block;
+}
+
+b, th, strong, h1, h2, h3, h4, h5, h6 {
+	
+}
+// ДОПОЛНИТЕЛЬНЫЕ НАСТРОЙКИ
+.all-button {
+	position: relative;
+	display: flex;
+	width: max-content;
+	height: 50px;
+	padding: 0 30px;
+	align-items: center;
+	justify-content: center;
+	color: $w;
+	font-size: 15px;
+	font-family: $fmb;
+	background: none;
+	border: none;
+	cursor: pointer;
+	flex: none;
+
+	&:before {
+		content: '';
+		position: absolute;
+		display: block;
+		top: 0;
+		left: -2px;
+		right: -2px;
+		bottom: 0;
+		background: linear-gradient(267.23deg, #7E0BEC 17.52%, #665CFF 71.2%);
+		@include rad(8px);
+		@include transition(0.2s);
+	}
+
+	&.left-skew:before {
+		transform: skew(12deg);
+	}
+
+	&.right-skew:before {
+		transform: skew(-12deg);
+	}
+
+	.text {
+		position: relative;
+		display: block;
+
+		&.center {
+			text-align: center;
+		}
+	}
+
+	.svg {
+		background: $w;
+		width: 21px;
+		height: 21px;
+
+		&.left {
+			margin-right: 10px;
+		}
+
+		&.right {
+			margin-left: 10px;
+		}
+	}
+
+	@include s-min(x1000) {
+		&:hover:before {
+			filter: hue-rotate(50deg);
+		}
+	}
+}
+
+.all-btn {
+	position: relative;
+	display: flex;
+	width: max-content;
+	height: 55px;
+	padding: 0 30px;
+	align-items: center;
+	justify-content: center;
+	color: $w;
+	font-size: 16px;
+	font-family: $fmb;
+	letter-spacing: 1px;
+	background: none;
+	border: 2px solid $p;
+	@include rad(25px);
+	cursor: pointer;
+	flex: none;
+	@include transition(0.2s);
+
+	span {
+		position: relative;
+		display: block;
+
+		&.center {
+			text-align: center;
+		}
+	}
+
+	.svg {
+		background: $w;
+		width: 25px;
+		height: 25px;
+
+		&.left {
+			margin-right: 12px;
+		}
+
+		&.right {
+			margin-left: 12px;
+		}
+
+		&.cooperation {
+			top: 1px;
+		}
+	}
+
+	@include s-min(x1000) {
+		&:hover {
+			background: $p;
+		}
+	}
+}
+
+.all-btn-skew {
+	position: relative;
+	display: flex;
+	width: max-content;
+	height: 55px;
+	padding: 0 30px;
+	align-items: center;
+	justify-content: center;
+	color: $w;
+	font-size: 20px;
+	font-family: $fms;
+	letter-spacing: 1px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	flex: none;
+	@include transition(0.2s);
+
+	span {
+		position: relative;
+		display: block;
+
+		&.center {
+			text-align: center;
+		}
+
+		i {
+			font-family: $fh;
+			font-weight: 700;
+			font-style: normal;
+		}
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border: 2px solid $p;
+		@include transition(0.2s);
+		@include rad(8px);
+		transform: skew(-10deg);
+	}
+
+	.svg {
+		background: $w;
+		width: 25px;
+		height: 25px;
+
+		&.left {
+			margin-right: 12px;
+		}
+
+		&.right {
+			margin-left: 12px;
+		}
+
+		&.cooperation {
+			top: 1px;
+		}
+	}
+
+	@include s-min(x1000) {
+		&:hover {
+			&:before {
+				background: $p;
+			}
+		}
+	}
+}
