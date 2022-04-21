@@ -15,7 +15,6 @@ function App() {
                     <Route path="/faq" element={<Faq />} />
                     <Route path="*" element={<Error />} />
                 </Route>
-
             </Routes>
         </>
     );

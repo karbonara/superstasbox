@@ -4,7 +4,7 @@ import Statistics from "../../components/statistics/statistics";
 
 function Main() {
     return (
-        <div>
+        <>
             <section className="content-wrapper">
                 <div className="case-container">
                     <div className="wrapper-title">
@@ -29,8 +29,7 @@ function Main() {
                 <Garant />
                 <Statistics />
             </section>
-
-        </div>
+        </>
     );
 }
 
